@@ -128,7 +128,7 @@ const chunks = pages.map(page => page.chunks[0]).reduce((acc, currentChunkName) 
   return acc
 }, {})
 
-module.exports = {
+const config = {
   entry: chunks,
 
   resolve: {
@@ -139,6 +139,14 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.(js)$/,
+        enforce: 'pre',
+        options: {
+          formatter: require('eslint/lib/formatters/stylish')
+        },
+        loader: require.resolve('eslint-loader')
+      },
       // BABEL
       {
         test: /\.js$/,
@@ -179,3 +187,5 @@ module.exports = {
     ]
   }
 }
+
+module.exports = config
