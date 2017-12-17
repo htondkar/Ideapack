@@ -2,6 +2,11 @@
   Webpack boilerplate for front-end development
 
 ## How to use
+  clone or download this repo, and start editing/adding files
+  js files should be added to app/ 
+  scss and images should be added to assets/ 
+  html files should be at the root
+
 ### Development: 
   To start dev server, run `npm/yarn run dev` 
   server will be available at http://localhost:8080/[my-page.html]
