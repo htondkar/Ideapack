@@ -17,6 +17,13 @@ const extractTextPluginOptions = {
   publicPath: Array(cssFilename.split('/').length).join('../')
 }
 
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+
+const styleLintOptions = {
+  config: './.stylelintrc',
+  syntax: 'scss'
+}
+
 const cssLoader = [
   {
     loader: require.resolve('css-loader'),
@@ -103,6 +110,8 @@ const HtmlWebpackPlugins = pages.map(
 )
 
 const plugins = [
+  new StyleLintPlugin(styleLintOptions),
+
   new webpack.DefinePlugin({
     IS_DEV: IS_DEV
   }),
