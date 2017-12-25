@@ -3,9 +3,12 @@
 
 ## How to use
   Clone or download this repo, run `yarn` command on your terminal/cmd
-  and start editing/adding files
-  js files should be added to "./app/" 
-  scss and images should be added to "./assets/" 
+  and start editing/adding files.
+  
+  js files should be added to "./app/"
+  
+  scss and images should be added to "./assets/"
+  
   html files should be at the root
 
 ### Development: 
